@@ -5,7 +5,7 @@ import db from '@/lib/db';
 export const dynamic = 'force-dynamic';
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY || 'dummy_key_for_build',
 });
 
 export async function GET(request: Request) {
