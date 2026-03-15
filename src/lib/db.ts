@@ -3,7 +3,7 @@ import path from 'path';
 
 // Connect to SQLite database
 // The db file will be created in the project root if it doesn't exist
-const dbPath = path.resolve(process.cwd(), 'sdlc_auditor.db');
+const dbPath = process.env.DB_PATH || path.resolve(process.cwd(), 'sdlc_auditor.db');
 const db = new Database(dbPath, { verbose: console.log });
 
 // Initialize database schema

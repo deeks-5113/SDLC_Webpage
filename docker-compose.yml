@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sdlc-auditor
+    ports:
+      - "6699:6699"
+    volumes:
+      - sdlc_data:/app/data
+    environment:
+      - NODE_ENV=production
+      - DB_PATH=/app/data/sdlc_auditor.db
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+    restart: unless-stopped
+
+volumes:
+  sdlc_data:
