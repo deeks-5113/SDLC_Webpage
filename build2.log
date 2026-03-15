@@ -1,0 +1,39 @@
+
+> sdlc-auditor@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./src/app/api/evaluate/route.ts
+162:13  Error: 'userResult' is never reassigned. Use 'const' instead.  prefer-const
+180:21  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+196:19  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/app/api/results/route.ts
+28:32  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+31:9  Error: 'averages' is never reassigned. Use 'const' instead.  prefer-const
+
+./src/app/assessment/page.tsx
+201:42  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+203:57  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+262:53  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+262:61  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/app/dashboard/page.tsx
+14:36  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+26:6  Warning: React Hook useEffect has a missing dependency: 'handleLogin'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+44:14  Error: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+61:14  Error: 'err' is defined but never used.  @typescript-eslint/no-unused-vars
+203:51  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/app/page.tsx
+27:58  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
